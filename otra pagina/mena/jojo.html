@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú del restaurante</title>
+  <style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f9c56a;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            position: fixed;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #d99e4c;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .review-section {
+            margin-top: 40px;
+        }
+
+        .review-card {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        .positive-review {
+            border: 2px solid #008000;
+        }
+
+        .negative-review {
+            border: 2px solid #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>Restaurante Elioth</h1>
+    <nav>
+        <ul>
+            <li><a href="/otra pagina/rese/ros.html">Reseñas</a></li>
+         
+            <li><a href="/otra pagina/mena/jojo.html">Platos</a></li>
+            <li><a href="/nos/to.html">Nosotros</a></li>
+            <li><a href="/His/for.html">Historia</a></li>
+            <li><a href="/conta/uu.html">Contactanos</a></li>
+        </ul>
+    </nav>
+</header>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .menu-item input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .description {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menú del restaurante</h1>
+
+  <div class="menu-item">
+    <input type="radio" name="food" value="1" id="food1" onclick="showDescription(1)">
+    <label for="food1">Plato 1</label>
+  </div>
+
+  <div class="menu-item">
+    <input type="radio" name="food" value="2" id="food2" onclick="showDescription(2)">
+    <label for="food2">Plato 2</label>
+  </div>
+
+  <div class="menu-item">
+    <input type="radio" name="food" value="3" id="food3" onclick="showDescription(3)">
+    <label for="food3">Plato 3</label>
+  </div>
+
+  <div class="description" id="description1">
+    <h3>Mole</h3>
+    <p>Platano, chile de mole, chile de color, pan molido, canela, clavo, pimienta y sal</p>
+  </div>
+
+  <div class="description" id="description2">
+    <h3>Enchiladas</h3>
+    <p>Salsa de tomate, masa y queso</p>
+  </div>
+
+  <div class="description" id="description3">
+    <h3>Tacos</h3>
+    <p>Tortilla y carne</p>
+  </div>
+
+  <script>
+    function showDescription(foodId) {
+      // Ocultar todas las descripciones
+      var descriptions = document.getElementsByClassName('description');
+      for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].style.display = 'none';
+      }
+
+      // Mostrar la descripción del plato seleccionado
+      var description = document.getElementById('description' + foodId);
+      description.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
